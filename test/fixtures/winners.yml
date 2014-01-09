@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  candidate_id: 1
+  publish_date: 2014-01-07 11:16:01
+  judge: MyString
+  comment: MyString
+
+two:
+  candidate_id: 1
+  publish_date: 2014-01-07 11:16:01
+  judge: MyString
+  comment: MyString

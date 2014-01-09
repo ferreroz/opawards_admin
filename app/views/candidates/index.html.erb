@@ -1,0 +1,30 @@
+	<%= render 'layouts/leftnav' %>
+	<%= render 'layouts/breadcrumb' %>	
+	
+	<li class="active">候选作品列表</a>
+</ul>
+
+<div>
+	<table class="item-list">
+		<thead>
+			<tr>
+				<th class="table-title">标题</th>
+				<th class="table-url">地址</th>
+				<th class="table-uploadtime">提交时间</th>
+				<th class="table-action">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% for candidate in @candidates %>
+			<tr>
+				<td class="table-title"><%= candidate.title %></td>
+				<td class="table-url"><a href="<%= candidate.image_url %>"><%= candidate.image_url %></a></td>
+				<td class="table-uploadtime"><%= candidate.created_at %></td>
+				<td class="table-action"><a href="/candidates/<%= candidate.id %>">查看</a></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+
+<%= debug(params) if Rails.env.development? %>

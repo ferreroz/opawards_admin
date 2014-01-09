@@ -1,0 +1,37 @@
+	<li><a href="/winners/">获奖作品列表</a> <span class="divider">></span></li>
+	<li class="active">作品详情</a>
+</ul>
+
+<div class="candidate-form">
+	<p>
+		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题:</b> <%= @candidate.title %>
+	</p>
+	<p>
+		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;描述:</b> <%= @candidate.description %>
+	</p>
+	<p>
+		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址:</b> <a href="<%= @candidate.image_url %>"><%= @candidate.image_url %></a>
+	</p>
+	<p>
+		<b>拍摄地点:</b> <%= @candidate.location %>
+	</p>
+	<p>
+	    <b>拍摄时间:</b> <%= @candidate.shooting_date %>
+	</p>
+	<p>
+		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;器材:</b> <%= @candidate.equipment %>
+	</p>
+	<p>
+		<b>作者职业:</b> <%= @candidate.profession %>
+	</p>
+	<p>
+		<b>摄影经验:</b> <%= @candidate.exp %>
+	</p>
+	<p>
+		<b>提交时间:</b> <%= @candidate.created_at %>
+	</p>
+	<form>
+		<button>选为获奖作品</button><input type="hidden" />
+	</form>
+</div>
+<%= debug(params) if Rails.env.development? %>

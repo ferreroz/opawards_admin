@@ -1,0 +1,42 @@
+<h1>Upload your photo</h1>
+<div class="center">
+
+		<%= form_for(@candidate) do |f| %>
+		
+		  <%= f.label :title %>
+		  <%= f.text_field :title %><br />
+		
+		  <%= f.label :description %>
+		  <%= f.text_field :description %><br />
+		
+		  <%= f.label :image_url %>
+		  <%= f.text_field :image_url %><br />
+		
+		  <%= f.label :location %>
+	   	  <%= f.text_field :location %><br />
+		
+		  <%= f.label :shooting_date %>
+		  <%= f.text_field :shooting_date %><br />
+		
+		  <%= f.label :equipment %>
+		  <%= f.text_field :equipment %><br />
+		
+		  <%= f.label :creator %>
+		  <%= f.text_field :creator %><br />
+		
+		  <%= f.label :phone_number %>
+		  <%= f.text_field :phone_number %><br />
+		
+		  <%= f.label :email %>
+		  <%= f.text_field :email %><br />
+		
+		  <%= f.label :exp %>
+		  <%= f.text_field :exp %><br />
+		
+		  <%= f.label :profession %>
+		  <%= f.text_field :profession %><br />
+		
+		  <%= f.submit "Upload my photo" %>
+		  
+		<% end %>
+	</div>

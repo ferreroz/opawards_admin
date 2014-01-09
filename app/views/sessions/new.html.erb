@@ -1,0 +1,19 @@
+<%= render 'layouts/header' %>
+
+<h1>Sign in</h1>
+
+		<div class="login-form">
+		<%= form_for(:session, url: sessions_path) do |f| %>
+		  
+		  <p><%= f.label :email %>
+		  <%= f.text_field :email %></p>
+		
+		  <p><%= f.label :password %>
+		  <%= f.password_field :password %></p>
+		
+		  <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+<div class="debug-info">	
+<%= debug(params) if Rails.env.development? %>
+</div>
