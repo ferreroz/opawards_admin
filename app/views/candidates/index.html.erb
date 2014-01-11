@@ -1,8 +1,12 @@
+
+	<%= render 'layouts/header' %>
 	<%= render 'layouts/leftnav' %>
 	<%= render 'layouts/breadcrumb' %>	
 	
-	<li class="active">候选作品列表</a>
+	<li class="active">候选作品列表</li>
+	<li><%= link_to "退出", '/signout',{ method: "delete", class: "signout" } %></li>
 </ul>
+
 
 <div>
 	<table class="item-list">
@@ -28,3 +32,4 @@
 </div>
 
 <%= debug(params) if Rails.env.development? %>
+</div>

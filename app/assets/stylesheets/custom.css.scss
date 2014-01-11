@@ -8,6 +8,7 @@ html {
 
 body {
 	padding-top: 45px;
+	margin: 0;
 }
 
 section {
@@ -150,7 +151,10 @@ td.table-url {
 	margin: 0 auto;
 }
 
-/* footer */
+/* breadcrumb */
+a.signout {
+	float: right;
+}
 
 /*footer {
         margin-top: 45px;

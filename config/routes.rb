@@ -1,12 +1,14 @@
 OpawardsAdmin::Application.routes.draw do
   
-  root to: 'sessions#new'
+  root to: 'candidates#index'
+ 
+  match '/signin', to: 'sessions#new', via: :get
+  match '/signout', to: 'sessions#destroy', via: :delete
   
   resources :users, only: [:show, :index]
   resources :sessions, only: [:new, :create, :destroy]
   
-  match '/signin', to: 'sessions#new', via: :get
-  get '/signout', to: 'sessions#destroy'
+
   
   resources :candidates
   resources :winners

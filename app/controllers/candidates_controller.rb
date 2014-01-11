@@ -1,5 +1,7 @@
 class CandidatesController < ApplicationController
   
+  before_filter :signed_in_user
+  
   def index
     @candidates = Candidate.find(:all, :order =>'created_at DESC')
   end
@@ -29,4 +31,7 @@ class CandidatesController < ApplicationController
       params.require(:candidate).permit(:title, :description, :image_url, :location, :shooting_date, :equipment, :creator, :phone_number, :email, :exp, :profession)
     end
   
+    def signed_in_user
+      redirect_to '/signin', notice: "Please sign in." unless signed_in? 
+    end
 end
